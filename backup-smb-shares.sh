@@ -21,7 +21,7 @@ targetPath="."
 for share in "${shares[@]}"
 do
 	echo "Mounting '$remote/$share' under '$mountPath/$share'"
-	PASSWD="$password" sudo -E mount.cifs "$remote/$share" "$mountPath/$share" -o user=backup
+	PASSWD="$password" sudo -E mount.cifs "$remote/$share" "$mountPath/$share" -o "user=$user"
 done
 
 # perform an incremental backup for all shares
