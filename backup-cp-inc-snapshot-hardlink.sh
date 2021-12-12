@@ -66,7 +66,6 @@ do
 	log cp -avu "$sourcePath/$dir" "$backupDir"
 	# -u update files only (do not remove and re-copy files, this destroys the hard links!), without deletion
 done
-# 4.9GiB: cp 42,941s / rsync 50,974s/44,782s
 
 # create the new snapshot using hard links
 logtime "Creating snapshot under '$snapshotDir'"
