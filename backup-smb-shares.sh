@@ -3,7 +3,7 @@
 printf "Working directory: "
 pwd
 
-# SMB server and shares
+# configure your SMB server and the shares you want to backup below
 remote="//synology-ds115"
 shares=("video" "music" "audio" "web")
 user="backup"
